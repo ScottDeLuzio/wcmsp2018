@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WCPHX2018 Plugin Demo
-Plugin URI: https://2018.phoenix.wordcamp.org
+Plugin URI: https://github.com/ScottDeLuzio/wcphx2018
 Description: Create custom post types and shortcodes
 Version: 1.0.0
 Author: Scott DeLuzio
@@ -24,3 +24,6 @@ include( 'includes/sports-tax.php' );
 
 // Add shortcode to list sport products in post content
 include( 'includes/list-sport-products-shortcode.php' );
+
+// Add metabox to products
+include( 'includes/products-meta-box.php' );
