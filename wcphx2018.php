@@ -2,7 +2,7 @@
 /*
 Plugin Name: WCPHX2018 Plugin Demo
 Plugin URI: https://github.com/ScottDeLuzio/wcphx2018
-Description: Create custom post types and shortcodes
+Description: Create custom post type and shortcode
 Version: 1.0.0
 Author: Scott DeLuzio
 Author URI: https://scottdeluzio.com

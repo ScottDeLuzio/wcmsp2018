@@ -29,4 +29,5 @@ function wcphx2018_register_sport_tax(){
 	);
 
 	register_taxonomy( 'sports', array( 'sport-product' ), $args );
+	//register_taxonomy( $taxonomy, $object_type, array( '' ) );
 }

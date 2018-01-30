@@ -56,6 +56,6 @@ function wcphx2018_sports_list( $sports ){
 		echo '</ul>';
 		wp_reset_postdata();
 	} else {
-		echo __( 'No sport products found.', 'wcphx2018' );
+		_e( 'No sport products found.', 'wcphx2018' );
 	}
 }
