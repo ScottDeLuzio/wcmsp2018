@@ -2,6 +2,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+/* WordPress action 'init' tells WordPress to run the function 'wcphx2018_register_sport_products_cpt'.
+ * This function will run the WordPress function 'register_post_type' with the args specified.
+ *
+ * More info: https://codex.wordpress.org/Function_Reference/register_post_type
+ */
 add_action( 'init', 'wcphx2018_register_sport_products_cpt' );
 
 function wcphx2018_register_sport_products_cpt(){
@@ -27,7 +32,7 @@ function wcphx2018_register_sport_products_cpt(){
 
 	// Set args for CPT
 	$args = array(
-		'labels'				=> $labels,								//An array of labels for this post type
+		'labels'				=> $labels,								//An array of labels for this post type from above.
 		'public'				=> true,								//Whether a post type is intended for use publicly either via the admin interface or by front-end users
 		'hierarchical'			=> false,								//Whether the post type is hierarchical (e.g. page)
 		'exclude_from_search'	=> false,								//Whether to exclude posts with this post type from front end search results
