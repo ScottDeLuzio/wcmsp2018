@@ -16,14 +16,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+/* Uncomment the include lines below so
+ * that the plugin will actually function.
+ */
+
 // Add Custom Post Type
-include( 'includes/sport-products-cpt.php' );
+// include( 'includes/sport-products-cpt.php' );
 
 // Add custom taxonomy 'sports' to the sport products CPT
-include( 'includes/sports-tax.php' );
+// include( 'includes/sports-tax.php' );
 
 // Add shortcode to list sport products in post content
-include( 'includes/list-sport-products-shortcode.php' );
+// include( 'includes/list-sport-products-shortcode.php' );
 
 // Add metabox to products
-include( 'includes/products-meta-box.php' );
+// include( 'includes/products-meta-box.php' );
