@@ -3,22 +3,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 /* WordPress function 'add_shortcode' is specifying a new shortcode called 'sport_products'.
- * The 'add_shortcode' function also specifies that the function 'wcphx2018_sport_products_list_shortcode'
+ * The 'add_shortcode' function also specifies that the function 'wcmsp2018_sport_products_list_shortcode'
  * should be run any time the shortcode [sport_products] is found in the content of a page, post, etc.
  *
  * More info: https://codex.wordpress.org/Function_Reference/add_shortcode
  */
-add_shortcode( 'sport_products', 'wcphx2018_sport_products_list_shortcode' );
+add_shortcode( 'sport_products', 'wcmsp2018_sport_products_list_shortcode' );
 
 /* This is the function that 'add_shortcode' told WordPress to run whenever [sport_products] is found in the content.
  * Anything specified in this funciton will be output in the content where the shortcode was placed.
  * The function 'shortcode_atts' specifies default values for the shortcode's attributes in case the user does not specify them.
  * In this case we are specifying an attribute 'sports'. Other attributes can be added to this as well.
- * This function tells us to run our 'wcphx2018_sports_list' function and return the results.
+ * This function tells us to run our 'wcmsp2018_sports_list' function and return the results.
  * To use this shortcode, add this to your page or post:
  * [sport_products sports="golf"]
  */
-function wcphx2018_sport_products_list_shortcode( $atts ) {
+function wcmsp2018_sport_products_list_shortcode( $atts ) {
 	$atts = shortcode_atts(
 		array(
 			'sports' => '',
@@ -29,7 +29,7 @@ function wcphx2018_sport_products_list_shortcode( $atts ) {
 
 	ob_start(); //Start remembering what would be output, but don't do anything with it yet
 
-	wcphx2018_sports_list( esc_html( $atts['sports'] ) );
+	wcmsp2018_sports_list( esc_html( $atts['sports'] ) );
 
 	$sports_list = ob_get_clean(); //Get what should be output and store it in a variable
 
@@ -43,7 +43,7 @@ function wcphx2018_sport_products_list_shortcode( $atts ) {
  * If the query does not return any results, it will return the text 'No sport products found'.
  */
 
-function wcphx2018_sports_list( $sports ){
+function wcmsp2018_sports_list( $sports ){
 	$args = array(
 		'post_type'			=> 'sport-product',
 		'tax_query'			=> array(
@@ -60,7 +60,7 @@ function wcphx2018_sports_list( $sports ){
 
 	// The Loop
 	if( $query->have_posts() ){
-		echo '<h4>' . __( 'Products You Might Be Interested In:', 'wcphx2018' ) . '</h4>';
+		echo '<h4>' . __( 'Products You Might Be Interested In:', 'wcmsp2018' ) . '</h4>';
 		echo '<ul>';
 
 		while( $query->have_posts() ){
@@ -73,6 +73,6 @@ function wcphx2018_sports_list( $sports ){
 		echo '</ul>';
 		wp_reset_postdata();
 	} else {
-		_e( 'No sport products found.', 'wcphx2018' );
+		_e( 'No sport products found.', 'wcmsp2018' );
 	}
 }

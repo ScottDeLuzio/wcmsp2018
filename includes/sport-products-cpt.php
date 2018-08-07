@@ -2,32 +2,32 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-/* WordPress action 'init' tells WordPress to run the function 'wcphx2018_register_sport_products_cpt'.
+/* WordPress action 'init' tells WordPress to run the function 'wcmsp2018_register_sport_products_cpt'.
  * This function will run the WordPress function 'register_post_type' with the args specified.
  *
  * More info: https://codex.wordpress.org/Function_Reference/register_post_type
  */
-add_action( 'init', 'wcphx2018_register_sport_products_cpt' );
+add_action( 'init', 'wcmsp2018_register_sport_products_cpt' );
 
-function wcphx2018_register_sport_products_cpt(){
+function wcmsp2018_register_sport_products_cpt(){
 	// Set labels for the CPT
 	$labels = array(
-		'name'					=> _x( 'Sport Products', 'post type general name', 'wcphx2018' ),	//General name for the post type, usually plural.
-		'singular_name'			=> _x( 'Sport Product', 'post type singular name', 'wcphx2018' ),	//Name for one object of this post type.
-		'add_new'				=> _x( 'Add New', 'sport product', 'wcphx2018' ),					//Default is ‘Add New’ for both hierarchical and non-hierarchical types.
-		'add_new_item'			=> __( 'Add New Sport Product', 'wcphx2018' ),						//Label for adding a new singular item.
-		'edit_item'				=> __( 'Edit Sport Product', 'wcphx2018' ),							//Label for editing a singular item
-		'new_item'				=> __( 'New Sport Product', 'wcphx2018' ),							//Label for the new item page
-		'view_item'				=> __( 'View Sport Product', 'wcphx2018' ),							//Label for viewing a singular item
-		'view_items'			=> __( 'View Sport Products', 'wcphx2018' ),						//Label for viewing post type archives
-		'search_items'			=> __( 'Search Sport Products', 'wcphx2018' ),						//Label for searching plural items
-		'not_found'				=> __( 'No sport products found.', 'wcphx2018' ),					//Label used when no items are found
-		'not_found_in_trash'	=> __( 'No sport products found in trash.', 'wcphx2018' ),			//Label used when no items are in the trash
-		'parent_item_colon'		=> __( 'Parent Sport Products:', 'wcphx2018' ),						//Label used to prefix parents of hierarchial items
-		'all_items'				=> __( 'All Sport Products', 'wcphx2018' ),							//Label to signify all items in a submenu link
-		'archives'				=> __( 'Sport Product Archives', 'wcphx2018' ),						//Label for archives in nav menus
-		'attributes'			=> __( 'Sport Product Attributes', 'wcphx2018' ),					//Label for the attributes meta box
-		'menu_name'				=> _x( 'Sport Products', 'admin menu', 'wcphx2018' )				//Label for the menu name (defaults to same as 'name' value above)
+		'name'					=> _x( 'Sport Products', 'post type general name', 'wcmsp2018' ),	//General name for the post type, usually plural.
+		'singular_name'			=> _x( 'Sport Product', 'post type singular name', 'wcmsp2018' ),	//Name for one object of this post type.
+		'add_new'				=> _x( 'Add New', 'sport product', 'wcmsp2018' ),					//Default is ‘Add New’ for both hierarchical and non-hierarchical types.
+		'add_new_item'			=> __( 'Add New Sport Product', 'wcmsp2018' ),						//Label for adding a new singular item.
+		'edit_item'				=> __( 'Edit Sport Product', 'wcmsp2018' ),							//Label for editing a singular item
+		'new_item'				=> __( 'New Sport Product', 'wcmsp2018' ),							//Label for the new item page
+		'view_item'				=> __( 'View Sport Product', 'wcmsp2018' ),							//Label for viewing a singular item
+		'view_items'			=> __( 'View Sport Products', 'wcmsp2018' ),						//Label for viewing post type archives
+		'search_items'			=> __( 'Search Sport Products', 'wcmsp2018' ),						//Label for searching plural items
+		'not_found'				=> __( 'No sport products found.', 'wcmsp2018' ),					//Label used when no items are found
+		'not_found_in_trash'	=> __( 'No sport products found in trash.', 'wcmsp2018' ),			//Label used when no items are in the trash
+		'parent_item_colon'		=> __( 'Parent Sport Products:', 'wcmsp2018' ),						//Label used to prefix parents of hierarchial items
+		'all_items'				=> __( 'All Sport Products', 'wcmsp2018' ),							//Label to signify all items in a submenu link
+		'archives'				=> __( 'Sport Product Archives', 'wcmsp2018' ),						//Label for archives in nav menus
+		'attributes'			=> __( 'Sport Product Attributes', 'wcmsp2018' ),					//Label for the attributes meta box
+		'menu_name'				=> _x( 'Sport Products', 'admin menu', 'wcmsp2018' )				//Label for the menu name (defaults to same as 'name' value above)
 	);
 
 	// Set args for CPT
